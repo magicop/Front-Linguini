@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="../css/swiper.css" type="text/css" />
+
+    <link rel="stylesheet" href="../one-page/css/et-line.css" type="text/css" />
+
+    <!-- restaurant Demo Specific Stylesheet -->
+    <link rel="stylesheet" href="../demos/restaurant/restaurant.css" type="text/css" />
+    <link rel="stylesheet" href="../demos/restaurant/css/fonts.css" type="text/css" />
+    <!-- / -->
+
+    <link rel="stylesheet" href="../css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../css/colors.php?color=blue" type="text/css" />
+    <link rel="stylesheet" href="../css/colors.css" type="text/css" />
+    <link rel="stylesheet" href="../css/custom.css" type="text/css" />
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Il Linguini Siglo 21</title>
+
+</head>
+
+<body class="stretched" data-loader-html="<span class='pizza'> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> </span>">
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="static-sticky transparent-header split-menu clearfix">
+
+            <div id="header-wrap" style="background-image: url('../images/sketch-header.png');">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="@Url.Action("Index", "Home")" class="standard-logo"><img src="../images/logo.png" alt="Canvas Logo"></a>
+                        <a href="@Url.Action("Index", "Home")" class="retina-logo"><img src="../images/logo@2x.png" alt="Canvas Logo"></a>
+                    </div><!-- #logo end -->
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu" class="with-arrows clearfix">
+
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")" style="color:#e9bd15;"><div>Home</div></a></li>
+                            <li><a href="@Url.Action("Somos", "Home")" style="color:#e9bd15;"><div>Acerca de</div></a></li>
+                        </ul>
+
+                        <ul>
+                            <li><a href="@Url.Action("Menu", "Home")" style="color:#e9bd15;"><div>Menu</div></a></li>
+                            <li><a href="@Url.Action("Reservar", "Home")" class="color"><div>Reservar</div></a></li>
+                        </ul>
+
+                    </nav><!-- #primary-menu end -->
+
+                </div>
+
+            </div>
+
+        </header><!-- #header end -->
+        <!-- Content
+        ============================================= -->
+        <section id="content" style="background: url('../images/restaurant/7.jpg') !important;">
+            <div class="full-screen" data-height-xs="400px" data-height-sm="500px" data-height-md="500px"></div>
+
+            <div class="p-5 reservation-form rounded bg-white">
+                <h3 class="font-secondary h1 color">Reserva ya !</h3>
+                <div class="row mt-4 clearfix" style="font-size: 16px; line-height: 1.7;">
+                    <div class="col-sm-6">
+                        <address style="line-height: 1.7;">
+                            <strong>Chile:</strong><br>
+                            Av. Américo Vespucio 23012, Santiago.<br>
+                        </address>
+                    </div>
+                    <div class="col-sm-6">
+                        <abbr title="Phone Number"><strong>Teléfono:</strong></abbr> +562 2342124<br>
+                        <abbr title="Email Address"><strong>Email:</strong></abbr> contacto@linguini.cl
+                    </div>
+                </div>
+
+                <div class="form-widget mt-4 mt-lg-0" data-loader="button">
+
+                    <div class="form-result"></div>
+
+                    @using (Html.BeginForm("Agregar", "Carta", FormMethod.Post, new { id = "FormAgregarCarta", name = "FormAgregarCarta", enctype = "multipart/form-data", onsubmit = "validacion()", @class = "mb-0 row" }))
+                    {
+
+                        <div class="form-process"></div>
+
+                        <div class="col-sm-6 mb-3">
+                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Rut (Ej: 187261721)" />
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Nombre" />
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <input type="text" id="template-contactform-name" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Apellido paterno" />
+                        </div>
+
+                        <!--<div class="clear"></div>-->
+
+                        <div class="col-sm-6 mb-3">
+                            <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control required" placeholder="Apellido materno" />
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <input type="text" id="template-contactform-name" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Teléfono" />
+                        </div>
+
+                        <div class="col-sm-6 mb-3 input-daterange travel-date-group">
+                            <input type="text" id="template-contactform-subject" name="subject" value="" class="sm-form-control border-form-control tleft required" placeholder="Selecciona fecha reserva">
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-6 mb-3">
+                            <select class="custom-select sm-form-control border-form-control">
+                                <option value="disabled" disabled selected>Selecciona la hora</option>
+                                <option value="12:00">12:00 - 13:00</option>
+                                <option value="13:00">13:00 - 14:00</option>
+                                <option value="14:00">14:00 - 15:00</option>
+                                <option value="18:00">18:00 - 19:00</option>
+                                <option value="19:00">19:00 - 20:00</option>
+                                <option value="20:00">20:00 - 21:00</option>
+                                <option value="21:00">21:00 - 22:00</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 mb-3">
+                            <select class="custom-select sm-form-control border-form-control">
+                                <option value="disabled" disabled selected>Cantidad personas</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-12 nobottommargin">
+                            <button class="button button-circle button-large text-white ml-0 mt-3" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Reservar</button>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-12 hidden">
+                            <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                        </div>
+
+                        <input type="hidden" name="prefix" value="template-contactform-">
+
+                    </form>
+                    }
+
+                </div>
+            </div>
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('../images/sketch-header.png') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;"></div>
+
+        </section><!-- #content end -->
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark" style="background: url('../images/restaurant/4.jpg')  repeat center center / cover; background-size: auto 100%;; padding: 50px 0 22px">
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights" class="nobg">
+
+                <div class="container clearfix">
+
+                    <div class="col_half nobottommargin">
+
+                        <span class="font-primary">&copy; Il Linguini 2019. Todos los derechos reservados</span>
+
+                    </div>
+
+                    <div class="col_half col_last nobottommargin">
+                        <div class="copyrights-menu copyright-links fright clearfix">
+                            <a href="@Url.Action("Index", "Home")">Inicio</a>/<a href="@Url.Action("Somos", "Home")">Acerca de</a>/<a href="@Url.Action("Menu", "Home")">Menú</a>/<a href="@Url.Action("Reservar", "Home")">Reservar</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- #copyrights end -->
+
+        </footer><!-- #footer end -->
+
+    </div><!-- #wrapper end -->
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-line-arrow-up"></div>
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/plugins.js"></script>
+
+    <!-- Travel Demo Specific Script -->
+    <script src="../js/components/datepicker.js"></script>
+
+    <!-- Map
+    ============================================= -->
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyDGka1X-NRAvbiYrAzYRTYsbhTQIKFdyLI"></script>
+    <script src="../js/jquery.gmap.js"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="../js/functions.js"></script>
+
+    <script>
+
+		$(function() {
+			$('.travel-date-group').datepicker({
+				autoclose: true,
+				startDate: "today",
+				todayHighlight: true
+			});
+		});
+
+		// Map Scripts
+		jQuery(window).on( 'load', function(){
+
+			jQuery('#popular-dest-map').gMap({
+				address: 'Indiana',
+				maptype: 'ROADMAP',
+				zoom: 4,
+				markers: [
+					{
+						address: "San Francisco, USA",
+						icon: {
+							image: "images/icons/shop-map.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					}
+				],
+				doubleclickzoom: true,
+				controls: {
+					panControl: false,
+					zoomControl: true,
+					mapTypeControl: true,
+					scaleControl: false,
+					streetViewControl: false,
+					overviewMapControl: false
+				},
+				styles: [
+			{elementType: 'geometry', stylers: [{color: '#333333'}]},
+			{elementType: 'labels.text.stroke', stylers: [{color: '#222222'}]},
+			{elementType: 'labels.text.fill', stylers: [{color: '#bf9456'}]},
+			{
+			  featureType: 'administrative.locality',
+			  elementType: 'labels.text.fill',
+			  stylers: [{color: '#bf9456'}]
+			},
+			{
+			  featureType: 'poi',
+			  elementType: 'labels.text.fill',
+			  stylers: [{color: '#bf9456'}]
+			},
+			{
+			  featureType: 'poi.park',
+			  elementType: 'geometry',
+			  stylers: [{color: '#111111'}]
+			},
+			{
+			  featureType: 'poi.park',
+			  elementType: 'labels.text.fill',
+			  stylers: [{color: '#000000'}]
+			},
+			{
+			  featureType: 'road',
+			  elementType: 'geometry',
+			  stylers: [{color: '#a07c48'}]
+			},
+			{
+			  featureType: 'road',
+			  elementType: 'geometry.stroke',
+			  stylers: [{color: '#a07c48'}]
+			},
+			{
+			  featureType: 'road',
+			  elementType: 'labels.text.fill',
+			  stylers: [{color: '#a07c48'}]
+			},
+			{
+			  featureType: 'road.highway',
+			  elementType: 'geometry',
+			  stylers: [{color: '#bf9456'}]
+			},
+			{
+			  featureType: 'road.highway',
+			  elementType: 'geometry.stroke',
+			  stylers: [{color: '#bf9456'}]
+			},
+			{
+			  featureType: 'road.highway',
+			  elementType: 'labels.text.fill',
+			  stylers: [{color: '#f3d19c'}]
+			},
+			{
+			  featureType: 'transit',
+			  elementType: 'geometry',
+			  stylers: [{color: '#000000'}]
+			},
+			{
+			  featureType: 'transit.station',
+			  elementType: 'labels.text.fill',
+			  stylers: [{color: '#bf9456'}]
+			},
+			{
+			  featureType: 'water',
+			  elementType: 'geometry',
+			  stylers: [{color: '#222222'}]
+			},
+			{
+			  featureType: 'water',
+			  elementType: 'labels.text.fill',
+			  stylers: [{color: '#222222'}]
+			},
+			{
+			  featureType: 'water',
+			  elementType: 'labels.text.stroke',
+			  stylers: [{color: '#222222'}]
+			}
+		  ]
+			});
+		});
+    </script>
+
+</body>
+</html>

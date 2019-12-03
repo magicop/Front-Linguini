@@ -1,0 +1,45 @@
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\csc.exe
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\System.Collections.Immutable.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\vbc.exe
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\VBCSCompiler.exe
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\roslyn\VBCSCompiler.exe.config
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Front Linguini.dll.config
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Front Linguini.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Front Linguini.pdb
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Antlr3.Runtime.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Microsoft.Web.Infrastructure.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Newtonsoft.Json.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Helpers.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Mvc.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Optimization.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Razor.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.WebPages.Deployment.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.WebPages.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.WebPages.Razor.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\WebGrease.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Helpers.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Mvc.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Optimization.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.Razor.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.WebPages.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.WebPages.Deployment.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Web.WebPages.Razor.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Antlr3.Runtime.pdb
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\Newtonsoft.Json.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\obj\Debug\Front Linguini.csprojResolveAssemblyReference.cache
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\obj\Debug\Front Linguini.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\obj\Debug\Front Linguini.pdb
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\itextsharp.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\itextsharp.xmlworker.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Net.Http.Formatting.dll
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\itextsharp.xml
+c:\users\win10\documents\visual studio 2015\Projects\Solución Front Linguini\Front Linguini\bin\System.Net.Http.Formatting.xml
