@@ -102,128 +102,26 @@
                 </div>
 
                 <div class="mt-4 mt-lg-0">
-                    
 
-                    @using (Html.BeginForm("AgregarReserva", "Home", FormMethod.Post, new { id = "FormAgregarCarta", name = "FormAgregarCarta", enctype = "multipart/form-data", onsubmit = "validacion()", @class = "mb-0 row" }))
+
+                    @using (Html.BeginForm("Buscar", "Home", FormMethod.Post, new { id = "FormBuscar", name = "FormBuscar", enctype = "multipart/form-data", onsubmit = "validacion()", @class = "mb-0 row" }))
                     {
+                        <br />
+                        <label>Ingrese rut del cliente</label>
+                        @Html.TextBoxFor(model => model.rutCliente, new { @class = "sm-form-control border-form-control required", placeholder = "Rut (Ej: 18726172-1)" })
 
-                        <div class="form-process"></div>
-
-                        <div class="col-sm-6 mb-3">
-
-                            @Html.TextBoxFor(model => model.rutCliente, new { @class = "sm-form-control border-form-control required", placeholder = "Rut (Ej: 187261721)" })
-                            <!--<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="" placeholder="" />-->
-                        </div>
-
-                        <div class="col-sm-6 mb-3">
-                            @Html.TextBoxFor(model => model.nombreCliente, new { @class = "sm-form-control border-form-control required", placeholder = "Nombre" })
-                        </div>
-                        <div class="col-sm-6 mb-3">
-                            @Html.TextBoxFor(model => model.apPaternoCliente, new { @class = "sm-form-control border-form-control required", placeholder = "Apellido paterno" })
-                            <!--<input type="text" id="template-contactform-name" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="" />-->
-                        </div>
-
-                        <!--<div class="clear"></div>-->
-
-                        <div class="col-sm-6 mb-3">
-                            @Html.TextBoxFor(model => model.apMaternoCliente, new { @class = "sm-form-control border-form-control required", placeholder = "Apellido materno" })
-                            <!--<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control required" placeholder="Apellido materno" />-->
-                        </div>
-
-                        <div class="col-sm-6 mb-3">
-                            @Html.TextBoxFor(model => model.telefonoCliente, new { @class = "sm-form-control border-form-control required", placeholder = "Teléfono" })
-                        </div>
-
-                        <div class="col-sm-6 mb-3 input-daterange travel-date-group">
-                            @Html.TextBoxFor(model => model.fechaEmisionReserva, new { @class = "sm-form-control border-form-control tleft required", placeholder = "Selecciona fecha reserva" })
-                            <!--<input type="text" id="template-contactform-subject" name="subject" value="" class="sm-form-control border-form-control tleft required" placeholder="Selecciona fecha reserva">-->
-                        </div>
-
-                        <div class="clear"></div>
-
-                        <div class="col-6 mb-3">
-                            @Html.DropDownListFor(
-                               model => model.fechaReserva,
-                               new SelectList(
-                                      new List<Object>{
-                                           new { value = "12:00" , text = "12:00 - 13:00"  },
-                                           new { value = "13:00" , text = "13:00 - 14:00" },
-                                           new { value = "14:00" , text = "14:00 - 15:00" },
-                                           new { value = "18:00" , text = "18:00 - 19:00" },
-                                           new { value = "19:00" , text = "19:00 - 20:00" },
-                                           new { value = "20:00" , text = "20:00 - 21:00" },
-                                           new { value = "21:00" , text = "21:00 - 22:00" }
-                                        },
-                                      "value",
-                                      "text",
-                                       Model.fechaReserva
-                               ), new { @class = "custom-select sm-form-control border-form-control" }
-                            )
-                            <!--<select class="custom-select sm-form-control border-form-control">
-                                <option value="disabled" disabled selected>Selecciona la hora</option>
-                                <option value="12:00">12:00 - 13:00</option>
-                                <option value="13:00">13:00 - 14:00</option>
-                                <option value="14:00">14:00 - 15:00</option>
-                                <option value="18:00">18:00 - 19:00</option>
-                                <option value="19:00">19:00 - 20:00</option>
-                                <option value="20:00">20:00 - 21:00</option>
-                                <option value="21:00">21:00 - 22:00</option>
-                            </select>-->
-                        </div>
-
-                        <div class="col-6 mb-3">
-
-                            @Html.DropDownListFor(
-                               model => model.cantidadPersonas,
-                               new SelectList(
-                                      new List<Object>{
-                                           new { value = 1 , text = "1"  },
-                                           new { value = 2 , text = "2" },
-                                           new { value = 3 , text = "3" },
-                                           new { value = 4 , text = "4" },
-                                           new { value = 5 , text = "5" },
-                                           new { value = 6 , text = "6" }
-                                        },
-                                      "value",
-                                      "text",
-                                       Model.cantidadPersonas
-                               ), new { @class = "custom-select sm-form-control border-form-control" }
-                            )
-                            <!--<select class="custom-select sm-form-control border-form-control">
-                                <option value="disabled" disabled selected>Cantidad personas</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>-->
-                        </div>
-
-                        <div class="clear"></div>
+                        <br />
 
                         <div class="col-12 nobottommargin">
-                            <button class="button button-circle button-large text-white ml-0 mt-3" type="submit" value="submit">Reservar</button>
+                            <button class="button button-circle button-large text-white ml-0 mt-3" type="submit" value="submit">Buscar</button>
                         </div>
-
-                        <div class="clear"></div>
-
-                    
-                    }
-
-                    @using (Html.BeginForm("FormBuscar", "Home", FormMethod.Post, new { id = "FormBuscarReserva", name = "FormBuscarReserva", enctype = "multipart/form-data", onsubmit = "validacion()", @class = "mb-0 row" }))
-                    {
-                        
-                        <h4>¿Quieres cancelar una reserva?</h4>
-                        
-                        <button class="button button-circle button-xs text-white" type="submit" value="submit">Buscar</button>
                     }
 
                     @{
-                        if (ViewBag.confirmacion == "si")
+                        if (ViewBag.ok == "si")
                         {
-                            <h3>@ViewBag.ok</h3>
-                            }
+                            <h3>@ViewBag.cancelado</h3>
+                        }
                     }
 
                 </div>

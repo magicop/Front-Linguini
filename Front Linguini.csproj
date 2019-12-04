@@ -139,6 +139,7 @@
     <Compile Include="Models\ApiRestful.cs" />
     <Compile Include="Models\Estados.cs" />
     <Compile Include="Models\Reservas.cs" />
+    <Compile Include="Models\Reservas2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +177,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\icons\trash.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\menu.jpg" />
     <Content Include="images\sketch-header.png" />
@@ -269,6 +271,9 @@
     <Content Include="Views\Home\Somos.cshtml" />
     <Content Include="Views\Home\View.cshtml" />
     <Content Include="Views\Home\Reservar.cshtml" />
+    <Content Include="Views\Home\FormBuscar.cshtml" />
+    <Content Include="Views\Home\Buscar.cshtml" />
+    <Content Include="Views\Home\Cancelar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,7 +283,6 @@
     <Folder Include="demos\restaurant\" />
     <Folder Include="images\bdd\" />
     <Folder Include="images\featured\" />
-    <Folder Include="images\icons\" />
     <Folder Include="images\restaurant\" />
     <Folder Include="images\team\" />
     <Folder Include="include\ajax\" />
