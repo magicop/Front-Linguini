@@ -56,7 +56,6 @@ namespace Front_Linguini.Controllers
 
         #region Agregar
         [HttpPost]
-
         public async Task<ActionResult> AgregarReserva(Reservas c)
         {
             try
@@ -84,7 +83,7 @@ namespace Front_Linguini.Controllers
         public static async Task<Uri> agregarReservas(Reservas c)
         {
 
-            string s = c.fechaEmisionReserva.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture);
+            string s = c.fechaReserva.ToString("dd-mm-yyyy-hh-mm-ss", CultureInfo.InvariantCulture);
 
             var url = "http://localhost:8034/api/reserva/" + c.rutCliente + "/" + c.nombreCliente + "/" + c.apPaternoCliente + "/" + c.apMaternoCliente + "/" + s + "/" + c.cantidadPersonas + "/" + c.telefonoCliente + "/" + "agregarReserva/";
             HttpResponseMessage response = await client.PostAsJsonAsync(url, c);
@@ -131,77 +130,41 @@ namespace Front_Linguini.Controllers
             }
 
         }
-        /*[HttpGet]
-        public static Reservas getReservas(Reservas c)
-        {
-            /*Usuario u = null;
-            
-            HttpResponseMessage response = await client.GetAsync(url);
-            HttpContent content = response.Content;
-            var result2 = await response.Content.ReadAsAsync<Usuario>();*/
-
-        /*var url = "http://localhost:8034/api/reserva/" + c.rutCliente;
-
-        Reservas model = null;
-        var client = new HttpClient();
-        var task = client.GetAsync(url)
-          .ContinueWith((taskwithresponse) =>
-          {
-              var response = taskwithresponse.Result;
-              var jsonString = response.Content.ReadAsStringAsync();
-              jsonString.Wait();
-              model = JsonConvert.DeserializeObject<Reservas>(jsonString.Result);
-
-          });
-        task.Wait();
-
-        if (model == null)
-        {
-            return null;
-        }
-        else
-        {
-            return model;
-        }
-
-    }*/
+       
         #endregion
+
 
         #region Cancelar
-        [HttpPost]
-        public ActionResult Cancelar(Reservas2 c)
+        
+        
+        public ActionResult Cancelar(string rut)
         {
-            try
+            //ViewBag.Result1 = categoriaApiClienat.categorias();
+
+            Reservas2 car = new Reservas2();
+            car.rutCliente = rut;
+
+            Reservas2 model = reservaApiController.cancelarReserva(car);
+
+            if (model == null)
             {
-                //ViewBag.Result1 = categoriaApiClienat.categorias();
-
-                Reservas2 car = new Reservas2();
-                car.idReserva = c.idReserva;
-
-                Reservas2 model = reservaApiController.buscarReserva(car);
-
-                if (model == null)
-                {
-                    ViewBag.error = "si";
-                    ViewBag.error2 = "No se ha encontrado la reserva.";
-                }
-                else
-                {
-                    ViewBag.ok = "si";
-                    ViewBag.cancelado = "Se ha cancelado su reserva con éxito";
-
-                }
-
-
-                return View();
+                ViewBag.error = "si";
+                ViewBag.error2 = "No se ha encontrado la reserva.";
             }
-            catch
+            else
             {
-                return RedirectToAction("Error");
+                ViewBag.confirmacion = "si";
+                ViewBag.cancelado = "Se ha cancelado su reserva con éxito";
+
             }
+
+
+            return View("Reservar", new Reservas());
 
         }
         #endregion
+
+    
 
     }
 }

@@ -104,7 +104,7 @@
                 <div class="mt-4 mt-lg-0">
                     
 
-                    @using (Html.BeginForm("AgregarReserva", "Home", FormMethod.Post, new { id = "FormAgregarCarta", name = "FormAgregarCarta", enctype = "multipart/form-data", onsubmit = "validacion()", @class = "mb-0 row" }))
+                    @using (Html.BeginForm("AgregarReserva", "Home", FormMethod.Post, new { id = "FormAgregarReserva", name = "FormAgregarReserva", enctype = "multipart/form-data", onsubmit = "validacion()", @class = "mb-0 row" }))
                     {
 
                         <div class="form-process"></div>
@@ -203,7 +203,7 @@
                         <div class="clear"></div>
 
                         <div class="col-12 nobottommargin">
-                            <button class="button button-circle button-large text-white ml-0 mt-3" type="submit" value="submit">Reservar</button>
+                            <button class="button button-circle button-large text-white ml-0 mt-3" type="submit" id="btnAgregarReserva" name="btnAgregarReserva" value="submit">Reservar</button>
                         </div>
 
                         <div class="clear"></div>
@@ -223,7 +223,8 @@
                         if (ViewBag.confirmacion == "si")
                         {
                             <h3>@ViewBag.ok</h3>
-                            }
+                            <h3>@ViewBag.cancelado</h3>
+                        }
                     }
 
                 </div>
@@ -280,6 +281,11 @@
     <!-- Footer Scripts
     ============================================= -->
     <script src="../js/functions.js"></script>
+
+    <!-- Validaciones -->
+    <script src="../Scripts/jquery.validate.js"></script>
+    <script src="../Scripts/additional-validation.js"></script>
+    <script src="../Scripts/validar-forms.js"></script>
 
     <script>
 
